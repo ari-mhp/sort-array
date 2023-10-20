@@ -1,5 +1,5 @@
 #include <stdio.h>
-// #include <string.h>
+#include <stdlib.h>
 #include <ctype.h>
 
 void initNumArray(int arrayNum[], int arraySize);
@@ -102,6 +102,11 @@ int main()
         printCharArray(arrayChar, arraySize, sortBy);
     }
 
+    printf("\n");
+
+    // Pause program before exit
+    system("pause");
+
     return 0;
 }
 
@@ -113,7 +118,7 @@ void initNumArray(int arrayNum[], int arraySize)
     // Insert element array
     for (int j = 0; j < arraySize; j++)
     {
-        printf("Insert element #%d: ", j);
+        printf("Insert element #%d: ", j+1);
         scanf("%d", &elementInput);
         arrayNum[j] = elementInput;
     }
@@ -135,7 +140,7 @@ void initCharArray(char arrayChar[], int arraySize)
     // Insert element array
     for (int j = 0; j < arraySize; j++)
     {
-        printf("Insert element #%d: ", j);
+        printf("Insert element #%d: ", j+1);
         scanf("%c");
         scanf("%c");
         scanf("%c", &elementInput);
